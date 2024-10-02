@@ -2,6 +2,7 @@ package application;
 
 
 import operacoesBasicas.ListaTarefa;
+import pesquisa.CatalagoLivros;
 
 public class Program {
 
@@ -21,6 +22,18 @@ public class Program {
 		System.out.println("Número de Tarefas: " + listTarefa.obterNumeroTotalTarefas());
 		
 		listTarefa.obterDescricao();
+		
+		CatalagoLivros catLivro = new CatalagoLivros();
+		
+		catLivro.addLivro("livro 01", "Autor 01", 2001);
+		catLivro.addLivro("livro 02", "Autor 02", 2002);
+		catLivro.addLivro("livro 03", "Autor 03", 2003);
+		catLivro.addLivro("livro 04", "Autor 04", 2004);
+		
+		System.out.println(catLivro.buscarPorAutor("Autor 03"));
+		System.out.println(catLivro.buscarPorIntervalo(2003, 2004));
+		System.out.println(catLivro.pesquisaPorTitulo("Livro 01"));
+		
 	}
 
 }
