@@ -41,7 +41,7 @@ public class Convidado {
 
 	@Override
 	public String toString() {
-		return "Convidado [nome=" + nome + ", codigoConvidado=" + codigoConvidado + "]";
+		return "Convidado [ nome + , codigoConvidado=" + codigoConvidado + "]";
 	}
 	
 	
