@@ -2,6 +2,7 @@ package application;
 
 
 import operacoesBasicas.ListaTarefa;
+import ordenacao.OrdenacaoPessoa;
 import pesquisa.CatalagoLivros;
 
 public class Program {
@@ -34,6 +35,15 @@ public class Program {
 		System.out.println(catLivro.buscarPorIntervalo(2003, 2004));
 		System.out.println(catLivro.pesquisaPorTitulo("Livro 01"));
 		
+		OrdenacaoPessoa ordPessoa = new OrdenacaoPessoa();
+		
+		ordPessoa.addPesosa("Nome 01", 20, 1.87);
+		ordPessoa.addPesosa("Nome 02", 45, 1.86);
+		ordPessoa.addPesosa("Nome 03", 25, 1.85);
+		ordPessoa.addPesosa("Nome 04", 33, 1.84);
+		
+		System.out.println(ordPessoa.ordenarPorIdade());
+		System.out.println(ordPessoa.ordenarPorAltura());
 	}
 
 }
