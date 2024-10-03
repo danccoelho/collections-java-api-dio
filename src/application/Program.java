@@ -4,6 +4,7 @@ package application;
 import operacoesBasicasList.ListaTarefa;
 import operacoesBasicasSet.ConjuntoConvidados;
 import ordenacaoList.OrdenacaoPessoa;
+import ordenacaoSet.CadrastroProdutos;
 import pesquisaList.CatalagoLivros;
 import pesquisaSet.AgendaContatos;
 
@@ -26,7 +27,7 @@ public class Program {
 		System.out.println("Existem " + cjc.contarConvidados() + " convidado(s) dentro do SET de convidados."  );
 		cjc.addConvidado("e", 123);
 		System.out.println("Existem " + cjc.contarConvidados() + " convidado(s) dentro do SET de convidados."  );
-		System.out.println();
+		System.out.println("------------------------------------------------------------------------------");
 		
 		AgendaContatos ac = new AgendaContatos();
 		
@@ -40,6 +41,17 @@ public class Program {
 		
 		System.out.println(ac.pesquisarNome("Camila"));
 		System.out.println("Novo " + ac.atualizarNumeroContato("Davi", 11111));
+		System.out.println("------------------------------------------------------------------------------");
+		
+		CadrastroProdutos cp = new CadrastroProdutos();
+		
+		cp.addProduto(1L, "Tv", 987, 5);
+		cp.addProduto(2L, "Celular", 2200, 12);
+		cp.addProduto(1L, "Pc", 7500, 15);
+		cp.addProduto(3L, "Teclado", 350, 3);
+		
+		System.out.println(cp.exibirProdutoNome());
+		System.out.println(cp.exibirProdutoPreco());
 	}
 
 }
